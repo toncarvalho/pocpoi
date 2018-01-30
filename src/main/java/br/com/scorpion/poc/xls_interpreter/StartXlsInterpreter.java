@@ -6,8 +6,6 @@ import java.io.IOException;
 
 public class StartXlsInterpreter {
 
-
-
     public static void main( String[] args) {
 
         ReaderPlan readerPlan = new ReaderPlan();
