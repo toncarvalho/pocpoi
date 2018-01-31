@@ -12,6 +12,14 @@ public class Usuario implements Serializable {
     private String senha;
     private Status status;
 
+    public Usuario(String emailLogin, String senha, Status status) {
+        this.emailLogin = emailLogin;
+        this.senha = senha;
+        this.status = status;
+    }
+
+    public Usuario() {
+    }
 
     public String getId() {
         return id;
@@ -69,5 +77,14 @@ public class Usuario implements Serializable {
                 .append(senha)
                 .append(status)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "emailLogin='" + emailLogin + '\'' +
+                ", senha='" + senha + '\'' +
+                ", status=" + status.name() +
+                '}';
     }
 }
