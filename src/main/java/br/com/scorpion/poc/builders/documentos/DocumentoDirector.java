@@ -24,8 +24,6 @@ public class DocumentoDirector {
     }
 
 
-
-
     public Documento getDocumento() {
 
         return builder.getDocumento();

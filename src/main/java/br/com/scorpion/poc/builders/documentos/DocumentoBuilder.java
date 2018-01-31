@@ -28,7 +28,7 @@ public abstract class DocumentoBuilder {
 
     public abstract void buildNomeDocumento();
 
-    public Documento getDocumento(){
+    public Documento getDocumento() {
         return documento;
     }
 

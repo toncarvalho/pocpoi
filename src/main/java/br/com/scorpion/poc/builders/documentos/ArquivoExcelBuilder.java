@@ -1,6 +1,6 @@
 package br.com.scorpion.poc.builders.documentos;
 
-public class ArquivoExcelBuilder extends  DocumentoBuilder {
+public class ArquivoExcelBuilder extends DocumentoBuilder {
     public void buildId() {
 
     }

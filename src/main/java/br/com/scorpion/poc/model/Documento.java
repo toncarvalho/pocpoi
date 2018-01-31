@@ -6,7 +6,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Documento  implements Serializable{
+public class Documento implements Serializable {
 
     private Long id;
     private Date dataHoraImportacao;
