@@ -1,4 +1,4 @@
-package br.com.scorpion.poc.builders;
+package br.com.scorpion.poc.builders.documentos;
 
 import br.com.scorpion.poc.model.Documento;
 
@@ -20,7 +20,7 @@ public abstract class DocumentoBuilder {
 
     public abstract void buildUsuarioImportador();
 
-    public abstract void buildStatusPastaDeTrabalho();
+    public abstract void buildStatusDocumento();
 
     public abstract void buildTipoDocumento();
 

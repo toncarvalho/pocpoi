@@ -1,6 +1,6 @@
 package br.com.scorpion.poc.builders.documentos;
 
-public class PastaDeTrabalhoBuilder extends  DocumentoBuilder {
+public class ArquivoExcelBuilder extends  DocumentoBuilder {
     public void buildId() {
 
     }
@@ -21,7 +21,7 @@ public class PastaDeTrabalhoBuilder extends  DocumentoBuilder {
 
     }
 
-    public void buildStatusPastaDeTrabalho() {
+    public void buildStatusDocumento() {
 
     }
 

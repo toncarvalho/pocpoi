@@ -1,4 +1,4 @@
-package br.com.scorpion.poc.builders;
+package br.com.scorpion.poc.builders.documentos;
 
 public class ImagenBuilder extends DocumentoBuilder {
     public void buildId() {
@@ -21,7 +21,7 @@ public class ImagenBuilder extends DocumentoBuilder {
 
     }
 
-    public void buildStatusPastaDeTrabalho() {
+    public void buildStatusDocumento() {
 
     }
 

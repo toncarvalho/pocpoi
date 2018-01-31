@@ -13,10 +13,9 @@ public class Documento  implements Serializable{
     private Date inicioPeriodo;
     private Date finalPeriodo;
     private Usuario usuarioImportador;
-    private StatusDocumento statusPastaDeTrabalho;
+    private StatusDocumento statusDocumento;
     private TipoDocumento tipoDocumento;
     private Long idArquivoFisico;
-    private String conteudoArquivo;
     private String nomeDocumento;
 
 
@@ -60,12 +59,12 @@ public class Documento  implements Serializable{
         this.usuarioImportador = usuarioImportador;
     }
 
-    public StatusDocumento getStatusPastaDeTrabalho() {
-        return statusPastaDeTrabalho;
+    public StatusDocumento getStatusDocumento() {
+        return statusDocumento;
     }
 
-    public void setStatusPastaDeTrabalho(StatusDocumento statusPastaDeTrabalho) {
-        this.statusPastaDeTrabalho = statusPastaDeTrabalho;
+    public void setStatusDocumento(StatusDocumento statusDocumento) {
+        this.statusDocumento = statusDocumento;
     }
 
     public TipoDocumento getTipoDocumento() {
@@ -84,13 +83,6 @@ public class Documento  implements Serializable{
         this.idArquivoFisico = idArquivoFisico;
     }
 
-    public String getConteudoArquivo() {
-        return conteudoArquivo;
-    }
-
-    public void setConteudoArquivo(String conteudoArquivo) {
-        this.conteudoArquivo = conteudoArquivo;
-    }
 
     public String getNomeDocumento() {
         return nomeDocumento;
@@ -114,10 +106,9 @@ public class Documento  implements Serializable{
                 .append(inicioPeriodo, documento.inicioPeriodo)
                 .append(finalPeriodo, documento.finalPeriodo)
                 .append(usuarioImportador, documento.usuarioImportador)
-                .append(statusPastaDeTrabalho, documento.statusPastaDeTrabalho)
+                .append(statusDocumento, documento.statusDocumento)
                 .append(tipoDocumento, documento.tipoDocumento)
                 .append(idArquivoFisico, documento.idArquivoFisico)
-                .append(conteudoArquivo, documento.conteudoArquivo)
                 .append(nomeDocumento, documento.nomeDocumento)
                 .isEquals();
     }
@@ -130,10 +121,9 @@ public class Documento  implements Serializable{
                 .append(inicioPeriodo)
                 .append(finalPeriodo)
                 .append(usuarioImportador)
-                .append(statusPastaDeTrabalho)
+                .append(statusDocumento)
                 .append(tipoDocumento)
                 .append(idArquivoFisico)
-                .append(conteudoArquivo)
                 .append(nomeDocumento)
                 .toHashCode();
     }

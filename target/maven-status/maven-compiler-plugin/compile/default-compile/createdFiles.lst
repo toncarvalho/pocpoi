@@ -1,1 +1,8 @@
+br\com\scorpion\poc\model\Documento.class
+br\com\scorpion\poc\model\Status.class
 br\com\scorpion\poc\xls_interpreter\StartXlsInterpreter.class
+br\com\scorpion\poc\model\TipoDocumento.class
+br\com\scorpion\poc\model\Usuario.class
+br\com\scorpion\poc\xls_interpreter\ReaderPlan.class
+br\com\scorpion\poc\builders\DocumentoBuilder.class
+br\com\scorpion\poc\model\StatusDocumento.class
