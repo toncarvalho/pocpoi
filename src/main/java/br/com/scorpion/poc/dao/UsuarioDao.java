@@ -2,49 +2,45 @@ package br.com.scorpion.poc.dao;
 
 import br.com.scorpion.poc.model.Status;
 import br.com.scorpion.poc.model.Usuario;
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
-import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.result.DeleteResult;
 import org.bson.Document;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 import static com.mongodb.client.model.Filters.eq;
 
 public class UsuarioDao {
 
-    private  MongoCollection<Document> usuariosCollection;
+    private MongoCollection<Document> usuariosCollection;
 
-    private MongoDbConnection dbConnection  ;
+    private MongoDbConnection dbConnection;
 
 
     public UsuarioDao() {
-        dbConnection  = MongoDbConnection.getInstance();
+        dbConnection = MongoDbConnection.getInstance();
         usuariosCollection = dbConnection.getDatabase().getCollection("usuarios");
     }
 
-    public  void inserir(Usuario usuario){
+    public void inserir(Usuario usuario) {
 
-        Document document = new Document("name",usuario.getEmailLogin());
-        document.append("emailLogin",usuario.getEmailLogin());
-        document.append("senha",usuario.getSenha().toString());
-        document.append("status",usuario.getStatus().name());
+        Document document = new Document("name", usuario.getEmailLogin());
+        document.append("emailLogin", usuario.getEmailLogin());
+        document.append("senha", usuario.getSenha().toString());
+        document.append("status", usuario.getStatus().name());
 
         usuariosCollection.insertOne(document);
 
     }
 
-    public   void imprimirPrimeiro() {
+    public void imprimirPrimeiro() {
         Document usuario = usuariosCollection.find().first();
         System.out.println(usuario.toJson());
 
     }
+
 
     public List<Usuario> listarTodos() {
         List<Usuario> usuarios = new ArrayList<Usuario>();
@@ -58,9 +54,9 @@ public class UsuarioDao {
                 u.setEmailLogin(doc.get("emailLogin").toString());
                 u.setSenha(doc.getString("senha").toString());
                 String strStatus = doc.get("status").toString();
-                if(strStatus.equals(Status.ATIVO.name())) {
+                if (strStatus.equals(Status.ATIVO.name())) {
                     u.setStatus(Status.ATIVO);
-                }else{
+                } else {
                     u.setStatus(Status.INATIVO);
                 }
 
@@ -75,14 +71,14 @@ public class UsuarioDao {
 
     }
 
-    public void excluir ( String id) {
+    public void excluir(String id) {
         DeleteResult deleteResult = usuariosCollection.deleteMany(eq("name", id));
 
-        System.out.println(deleteResult.getDeletedCount());
+        System.out.println(deleteResult.getDeletedCount() + " Excluídos");
     }
 
-    public void excluirTodosAtivos ( ) {
-        DeleteResult deleteResult = usuariosCollection.deleteMany(eq("status", "ATIIVO"));
+    public void excluirTodosAtivos() {
+        DeleteResult deleteResult = usuariosCollection.deleteMany(eq("status", "INATIVO"));
 
         System.out.println(deleteResult.getDeletedCount());
     }
