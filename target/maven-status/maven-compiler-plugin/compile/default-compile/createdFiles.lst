@@ -1,8 +1,14 @@
 br\com\scorpion\poc\model\Documento.class
-br\com\scorpion\poc\model\Status.class
 br\com\scorpion\poc\xls_interpreter\StartXlsInterpreter.class
+br\com\scorpion\poc\dao\UsuarioDao.class
 br\com\scorpion\poc\model\TipoDocumento.class
 br\com\scorpion\poc\model\Usuario.class
-br\com\scorpion\poc\xls_interpreter\ReaderPlan.class
-br\com\scorpion\poc\builders\DocumentoBuilder.class
+br\com\scorpion\poc\builders\documentos\DocumentoDirector.class
+br\com\scorpion\poc\builders\documentos\DocumentoBuilder.class
 br\com\scorpion\poc\model\StatusDocumento.class
+br\com\scorpion\poc\builders\documentos\ArquivoExcelBuilder.class
+br\com\scorpion\poc\model\Status.class
+br\com\scorpion\poc\xls_interpreter\PlanImport.class
+br\com\scorpion\poc\dao\MongoDbConnection.class
+br\com\scorpion\poc\xls_interpreter\ReaderPlan.class
+br\com\scorpion\poc\builders\documentos\ImagenBuilder.class
